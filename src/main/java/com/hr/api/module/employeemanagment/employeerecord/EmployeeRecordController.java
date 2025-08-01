@@ -22,7 +22,7 @@ public class EmployeeRecordController {
 
     @GetMapping("/employees/{id}/records")
     public ResponseEntity<List<EmployeeRecordDto>> getEmployeeRecords(@PathVariable Long id) {
-//    	
+
     	return ResponseEntity.ok(employeeRecordService.getEmployeeRecords(id));
     }
     
