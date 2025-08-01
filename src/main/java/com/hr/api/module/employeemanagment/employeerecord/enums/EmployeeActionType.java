@@ -1,0 +1,27 @@
+package com.hr.api.module.employeemanagment.employeerecord.enums;
+
+public enum EmployeeActionType {
+
+		PROMOTION,
+	    TRANSFER,
+	    SALARY_CHANGE,
+	    BONUS,
+	    WARNING,
+	    TERMINATION,
+	    REHIRE,
+	    CONTRACT_RENEWAL,
+	    LEAVE_APPROVED,
+	    LEAVE_REJECTED,
+	    TRAINING,
+	    CERTIFICATION,
+	    ONBOARDING,
+	    DEMOTION,
+	    PERFORMANCE_REVIEW,
+	    DEPARTMENT_CHANGE, 
+	    POSITION_CHANGE,
+	    JOB_TITLE_CHANGE,
+	    WORK_LOCATION_CHANGE, 
+	    NAME_CHANGE,
+	    DATE_OF_BIRTH_CHANGE,
+	    EDUCATIONAL_QUALIFICATION_CHANGE
+}
