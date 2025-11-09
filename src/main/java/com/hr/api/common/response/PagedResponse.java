@@ -12,10 +12,12 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PagedResponse<T> {
-    private List<T> content;
-    private int page;
+   
+	private List<T> content;
+    private int number;
     private int size;
     private long totalElements;
     private int totalPages;
     private boolean last;
+
 }

@@ -13,15 +13,16 @@ import com.hr.api.common.validators.UniqueValidator;
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Unique {
-    String message() default "{validation.unique}";
+  
+	String message() default "{validation.unique}";
 
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
 
-    String fieldName(); // e.g., "username"
+    String fieldName();
     
     boolean updating() default false;
 
-    Class<?> entity(); // e.g., User.class
+    Class<?> entity();
 }

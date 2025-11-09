@@ -12,10 +12,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ApiError {
-    private int status;
+   
+	private int status;
     private String message;
     private Map<String, String> messages = new HashMap();
     private String error;
     private LocalDateTime timestamp = LocalDateTime.now();
     private String path;
+
 }

@@ -1,8 +1,6 @@
 package com.hr.api.module.employeemanagment.employee;
 
-import java.lang.classfile.instruction.NewMultiArrayInstruction;
 import java.util.Optional;
-import java.util.Set;
 
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.domain.Pageable;
@@ -71,11 +69,7 @@ public class EmployeeService  {
         employeeMapper.updateEmployeeFromRequest(updateEmployeeRequest, employee);
         
         employee = employeeRepository.save(employee);
-        
-
-		log.error(requestUtil.getCurrentUser().getEmail());
-		
-      
+       		
         this.applicationEventPublisher.publishEvent(new EmployeeUpdatedEvent(requestUtil.getCurrentUser(), employeeBeforeUpdate, employee));
         
         return employeeMapper.toDto(employee);

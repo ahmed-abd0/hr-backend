@@ -40,7 +40,7 @@ public class TenantEventListener {
 	        }	
 			
 			
-		}catch (SQLException |IOException ex) {	
+		} catch (SQLException |IOException ex) {	
 			log.error(ex.getMessage(), ex);	
 		}
 		
@@ -48,7 +48,8 @@ public class TenantEventListener {
 	
 	
 	private String loadSqlScript(String path, String passwordHash) throws IOException {
-	    String sql = new String(getClass().getClassLoader().getResourceAsStream(path).readAllBytes());
+	    
+		String sql = new String(getClass().getClassLoader().getResourceAsStream(path).readAllBytes());
 	    return sql.replace(":password", passwordHash );
 	}
 

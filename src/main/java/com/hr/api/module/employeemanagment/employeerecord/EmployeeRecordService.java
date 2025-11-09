@@ -1,8 +1,11 @@
 package com.hr.api.module.employeemanagment.employeerecord;
 
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import com.hr.api.common.response.PagedResponse;
 import com.hr.api.module.employeemanagment.employee.Employee;
 import com.hr.api.module.employeemanagment.employeerecord.dto.EmployeeRecordDto;
 
@@ -38,9 +41,9 @@ public class EmployeeRecordService {
     }
     
     
-    public List<EmployeeRecordDto> getEmployeeRecords(Long id) {
+    public PagedResponse<EmployeeRecordDto> getEmployeeRecords(Long id, Pageable pageable) {
 
-		return employeeRecordMapper.toDtos(this.employeeRecordRepository.findByEmployeeId(id));
+		return employeeRecordMapper.toPagedDto(this.employeeRecordRepository.findByEmployeeId(id, pageable));
 	}
 
 }

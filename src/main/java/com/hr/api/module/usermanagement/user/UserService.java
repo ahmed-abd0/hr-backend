@@ -69,7 +69,7 @@ public class UserService implements UserAuthService{
 	}
 	
 	@Transactional
-	public UserDto updateUser(Long id,UpdateUserRequest dto, Optional<MultipartFile> file) {
+	public UserDto updateUser(Long id, UpdateUserRequest dto, Optional<MultipartFile> file) {
 		  
 		UserDto user = updateUser(id, dto);
 		

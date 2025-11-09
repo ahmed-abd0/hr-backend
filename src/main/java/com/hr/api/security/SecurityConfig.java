@@ -64,7 +64,11 @@ public class SecurityConfig {
 		 http.authorizeHttpRequests((request) -> 
 			request.requestMatchers( 
 					"/auth/**",
-					"/error"
+					"/error",
+					"/v3/api-docs/**",
+	                "/swagger-ui/**",
+	                "/swagger-ui.html",
+					"/favicon.ico"
 	                ).permitAll()
 					.requestMatchers("/uploads/**").permitAll()
 					.anyRequest().authenticated()
@@ -111,12 +115,14 @@ public class SecurityConfig {
 	
 	@Bean
 	public PasswordEncoder passwordEncoder() {
+	
 		return new BCryptPasswordEncoder();
 	}
 	
 	@Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
-        return authConfig.getAuthenticationManager();
+        
+		return authConfig.getAuthenticationManager();
     }
 	
 }

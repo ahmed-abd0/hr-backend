@@ -12,9 +12,11 @@ import com.hr.api.common.validators.PassayPasswordValidator;
 @Target({ElementType.FIELD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface StrongPassword {
-    String message() default "weak.password";
+  
+	String message() default "weak.password";
 
     Class<?>[] groups() default {};
-
+    
     Class<? extends Payload>[] payload() default {};
+
 }

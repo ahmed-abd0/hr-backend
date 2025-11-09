@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.3</version>
+		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.hr</groupId>
@@ -27,9 +27,10 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>24</java.version>
+		<java.version>21</java.version>
 	</properties>
 	<dependencies>
+	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -45,6 +46,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			
 		</dependency>
 
 		 <dependency>
@@ -103,8 +105,12 @@
 		    <version>1.6.2</version>
 		</dependency> 
 		
-		
-		
+		<dependency>
+		  <groupId>org.springdoc</groupId>
+		  <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+		  <version>2.5.0</version>
+		</dependency>
+
 		<!-- jwt dependancy -->
 		<dependency>
 		    <groupId>io.jsonwebtoken</groupId>
@@ -124,7 +130,8 @@
 		    <scope>runtime</scope>
 		</dependency>
 
-		 <!-- end jwt dependancy -->		
+		 <!-- end jwt dependancy -->	
+	
 		
 	</dependencies>
 
@@ -170,5 +177,8 @@
 			
 		</plugins>
 	</build>
+	
+
+
 
 </project>

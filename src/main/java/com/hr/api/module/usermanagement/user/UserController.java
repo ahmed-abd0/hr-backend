@@ -28,7 +28,7 @@ import com.hr.api.module.usermanagement.user.request.AssignAuthorityRequest;
 import com.hr.api.module.usermanagement.user.request.CreateUserRequest;
 import com.hr.api.module.usermanagement.user.request.UpdateUserRequest;
 
-import jakarta.transaction.Transactional;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 

@@ -1,7 +1,6 @@
 package com.hr.api.module.usermanagement.authority;
 
 
-import java.lang.classfile.instruction.ReturnInstruction;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -12,7 +11,6 @@ import org.springframework.stereotype.Service;
 import com.hr.api.common.response.PagedResponse;
 import com.hr.api.module.usermanagement.authority.request.CreateAuthorityRequest;
 import com.hr.api.module.usermanagement.permission.Permission;
-import com.hr.api.module.usermanagement.permission.PermissionDto;
 import com.hr.api.module.usermanagement.user.User;
 import com.hr.api.module.usermanagement.user.contract.AuthorityUserService;
 
