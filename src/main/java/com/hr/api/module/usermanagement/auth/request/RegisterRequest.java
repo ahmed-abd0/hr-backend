@@ -29,6 +29,6 @@ public record RegisterRequest(
 		String email,
 
 		@NotEmpty(message = "{user.roles.required}")
-		List<@NotBlank(message = "{user.roles.invalid}") Long> roles
+		List<Long> roles
 
 	) {}
